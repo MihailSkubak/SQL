@@ -1,0 +1,28 @@
+USE [BigMarket]
+GO
+
+/****** Object:  Table [dbo].[Year]    Script Date: 19.09.2018 17:46:16 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Year](
+	[Year_id] [int] NOT NULL,
+	[Year] [int] NOT NULL,
+ CONSTRAINT [PK_YEAR] PRIMARY KEY CLUSTERED 
+(
+	[Year_id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+SELECT AVG (Year) AS SomeYear FROM Year
+GO
+SELECT MAX (Year) AS SomeYear FROM Year
+GO
+SELECT COUNT (Year) AS SomeYear FROM Year
+GO
+SELECT SUM (Year) AS SomeYear FROM Year
+GO

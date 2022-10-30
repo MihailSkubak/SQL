@@ -1,0 +1,19 @@
+USE [BigMarket]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Fuel](
+	[Fuel_id] [int] NOT NULL,
+	[Fuel] [varchar](50) NOT NULL
+CONSTRAINT [PK_FUEL] PRIMARY KEY CLUSTERED
+  (
+  [Fuel_id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO

@@ -1,0 +1,35 @@
+USE [BigMarket]
+GO
+CREATE PROCEDURE ProcTable AS
+BEGIN
+SELECT Marka,Model
+FROM Car
+END;
+GO
+EXECUTE ProcTable
+GO
+DROP PROCEDURE ProcTable
+GO
+
+CREATE PROC ProcTable2 
+@Email VARCHAR(20),
+@Phone VARCHAR(20)
+AS
+INSERT INTO [dbo].[User](Email,Phone)
+VALUES (@Email,@Phone)
+GO
+
+DECLARE @E VARCHAR(20),@P VARCHAR(20);
+SET @E='Babkin@mail'
+SET @P='+38093645877'
+EXEC ProcTable2 @E,@P
+SELECT * FROM [dbo].[User]
+GO
+CREATE PROCEDURE ProcTable3 AS
+BEGIN
+SELECT Car_id AS Number,Marka,Model
+FROM Car
+END;
+GO
+EXEC ProcTable3
+GO
